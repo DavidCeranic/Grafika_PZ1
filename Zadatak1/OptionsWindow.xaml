@@ -1,0 +1,55 @@
+﻿<Window x:Class="Zadatak1.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadatak1"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"
+        Title="OptionsWindow" Height="476.054" Width="411.423" Background="#FFE4E5D6">
+    <Grid Margin="10,10,4.415,13.508" OpacityMask="Black" >
+        <Label Name="widthLabel" Content="Width:" HorizontalAlignment="Left" Height="43" Margin="0,10,0,0" VerticalAlignment="Top" Width="155" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Name="heightLabel" Content="Height:" HorizontalAlignment="Left" Height="43" Margin="0,79,0,0" VerticalAlignment="Top" Width="155" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Name="fillColorLabel"  Content="Fill Color:" HorizontalAlignment="Left" Height="43" Margin="0,148,0,0" VerticalAlignment="Top" Width="155" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Name="borderColorLabel" Content="Border Color:" HorizontalAlignment="Left" Height="43" Margin="0,217,0,0" VerticalAlignment="Top" Width="155" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Name="borderTLabel" Content="Border Thickness:" HorizontalAlignment="Left" Height="43" Margin="0,286,0,0" VerticalAlignment="Top" Width="155" FontSize="18" FontFamily="Times New Roman"/>
+        <TextBox x:Name="width" Text="" PreviewTextInput="NumberValidationTextBox"  HorizontalAlignment="Left" Height="43" Margin="249,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBox x:Name="height" Text="" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="43" Margin="249,79,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" FontFamily="Times New Roman" FontSize="16"/>
+
+        <ComboBox Name="fillColor" HorizontalAlignment="Left" Height="43" Margin="249,148,0,0" VerticalAlignment="Top" Width="132">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <ComboBox x:Name="borderColor" HorizontalAlignment="Left" Height="43" Margin="249,217,0,0" VerticalAlignment="Top" Width="132">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBox x:Name="borderT" Text="" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="43" Margin="249,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" FontSize="16"/>
+
+        <Button x:Name="Cancle" Content="Cancel" HorizontalAlignment="Left" Height="38" Margin="10,376,0,0" VerticalAlignment="Top" Width="145" Click="CancleButton_Click" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="Draw" Content="Draw" HorizontalAlignment="Left" Height="38" Margin="249,376,0,0" VerticalAlignment="Top" Width="132" Click="DrawButton_Click" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+
+        <Label Name="widthGreska" Content="" HorizontalAlignment="Left" Height="26" Margin="249,53,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="heightGreska" Content="" HorizontalAlignment="Left" Height="26" Margin="249,122,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="fillColorGreska" Content="" HorizontalAlignment="Left" Height="26" Margin="249,191,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="borderColorGreska" Content="" HorizontalAlignment="Left" Height="26" Margin="249,260,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="borderTGreska" Content="" HorizontalAlignment="Left" Height="26" Margin="249,329,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="radiusXLabel" Content="Radius X:" HorizontalAlignment="Left" Height="43" Margin="0,10,0,0" VerticalAlignment="Top" Width="155" FontSize="18" Visibility="Collapsed"/>
+        <Label x:Name="radiusYLabel" Content="Radius Y:" HorizontalAlignment="Left" Height="43" Margin="0,79,0,0" VerticalAlignment="Top" Width="155" FontSize="18" Visibility="Collapsed"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Zadatak1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadatak1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FFE4E5D6">
+    <Grid Margin="0,0,-0.154,-0.077">
+        <Canvas x:Name="canvas" MouseDown="drawing_MouseDown" Background="White" HorizontalAlignment="Left" Height="376" Margin="0,45,0,0" VerticalAlignment="Top" Width="794"/>
+        <Button Name="circleButton" Content="Ellipse" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="146" Click="circleButton_Click" Grid.RowSpan="2" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="squareButton" Content="Rectangle" HorizontalAlignment="Left" Height="45" Margin="145,0,0,0" VerticalAlignment="Top" Width="147" Click="squareButton_Click" Grid.RowSpan="2" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="polygonButton" Content="Polygon" HorizontalAlignment="Left" Height="45" Margin="290,0,0,0" VerticalAlignment="Top" Width="146" Click="polygonButton_Click" Grid.RowSpan="2" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="imageButton" Content="Image" HorizontalAlignment="Left" Height="45" Margin="435,0,0,0" VerticalAlignment="Top" Width="145" Click="imageButton_Click" Grid.RowSpan="2" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="Undo" Content="Undo" HorizontalAlignment="Left" Margin="579,0,0,0" VerticalAlignment="Top" Width="110" Click="Undo_Click" Height="23" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="14"/>
+        <Button x:Name="Redo" Content="Redo" HorizontalAlignment="Left" Margin="689,0,0,0" VerticalAlignment="Top" Width="105" Click="Redo_Click" Height="23" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="14"/>
+        <Button Name="Clear" Command="" Content="Clear" HorizontalAlignment="Left" Margin="646,22,0,0" VerticalAlignment="Top" Width="84" Click="Button_Clear" Height="23" Background="#FFBFB692" FontFamily="Times New Roman" FontSize="14"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\ellipse.png" Stretch="UniformToFill" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="52" Grid.RowSpan="2" Margin="0,-3,0,0"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\rectangle3.png"  HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="35" Margin="146,5,0,0"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\polygon.png"  HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Grid.RowSpan="2" Margin="296,3,0,0"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\image.png"  HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Grid.RowSpan="2" Margin="440,3,0,0"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\undo.png"  HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="26" Margin="595,0,0,0" Grid.RowSpan="2"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\redo.png"  HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="26" Margin="695,1,0,0" Grid.RowSpan="2"/>
+        <Image Source="C:\Users\david\Desktop\Grafika\Kuci\Zadatak1\Slike\clear.png"  HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="26" Margin="650,22,0,0"/>
+
+    </Grid>
+</Window>
